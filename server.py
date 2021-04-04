@@ -5,9 +5,8 @@ import sys
 print('Welcome to the game!')
 
 port = 1234
-host = ''
+
 server_socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-print(socket.gethostname())
 server_socket.bind((socket.gethostname(), port))
 server_socket.listen(2)
 connection, add = server_socket.accept()
