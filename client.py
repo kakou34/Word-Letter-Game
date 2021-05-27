@@ -21,7 +21,7 @@ words = []
 server_message = client_socket.recv(1024)
 server_message = server_message.decode()
 words.append(server_message)
-print((server_name, server_message))
+print(f'{server_name}: {server_message}')
 
 time_left = 20
 while True:
@@ -65,5 +65,5 @@ while True:
         print(server_message)
         break
     words.append(server_message)
-    print((server_name, server_message))
+    print(f'{server_name}: {server_message}')
     time_left = 20
